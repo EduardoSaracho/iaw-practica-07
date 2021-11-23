@@ -1,0 +1,10 @@
+upstream frontend {
+    server IP_FRONTEND_01;
+    server IP_FRONTEND_02;
+}    
+server {
+    server_name DOMAIN
+    location / {
+        proxy_pass http://frontend;
+    }
+}
