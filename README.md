@@ -11,9 +11,9 @@
 #!/bin/bash
 set -x
 
-##################################################################################
+##########################################################################
 # Variables de configuracion
-##################################################################################
+##########################################################################
 
 IP_FRONTEND_01=172.31.22.13
 IP_FRONTEND_02=172.31.28.43
@@ -25,9 +25,9 @@ DOMAIN=practica7iaw.ddns.net
 <p style='text-align: justify;'>Antes de comenzar cualquier instalación, es recomendable actualizar el sistema para evitar posibles errores.</p>
 
 ```bash
-#################################################################################
+##########################################################################
 # Actualizamos el sistema
-#################################################################################
+##########################################################################
 
 apt update -y
 apt upgrade -y
@@ -37,9 +37,9 @@ apt upgrade -y
 <p style='text-align: justify;'>Instalamos el <b>servidor web Nginx</b> y copiamos nuestro fichero <b>default_loadbalancer</b> en el directorio <i>/etc/nginx/sites-available/default</i> y reemplazamos el texto del archivo con la IP privada de nuestro <b>frontend1</b> y <b>frontend2</b>. Seguidamente reiniciamos Nginx para que se apliquen los cambios.</p>
 
 ```bash
-##################################################################################
+##########################################################################
 # Instalación y configuración del servidor Nginx
-##################################################################################
+##########################################################################
 
 # Instalamos el servidor web Nginx
 apt install nginx -y
@@ -59,9 +59,9 @@ sudo systemctl restart nginx
 <p style='text-align: justify;'>Para finalizar, debemos de configurar <b>HTTPS</b>. Instalaremos <b>snapd</b> y el <b>cliente de Certbot con el módulo de nginx</b>. Solicitaremos el certificado <b>HTTPS</b> sin necesidad de interactuar con su asistente, ejecutando el código con las respuestas correspondientes.</p>
 
 ```bash
-##################################################################################
+##########################################################################
 # Configuración HTTPS
-##################################################################################
+##########################################################################
 
 # Realizamos la instalación de snapd
 snap install core
